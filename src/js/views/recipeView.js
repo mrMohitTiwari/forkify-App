@@ -1,7 +1,7 @@
 import View from "./View";
 import icons from "url:../../img/icons.svg";
 import { Fraction } from "fractional";
-// console.log(Fraction);
+console.log(Fraction);
 // console.log(new Fraction(1.2).toString());
 // console.log(new Fraction(1.2).toString());
 // console.log(new Fraction(1).toString());
