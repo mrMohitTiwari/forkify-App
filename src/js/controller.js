@@ -95,7 +95,7 @@ const controlAddBookmark = function () {
 // function for loading bookmarks at the begining of page load
 const controlBookMarks = function () {
   bookmarkVIew.render(model.state.bookmarks);
-  console.log(model.state.bookmarks);
+  // console.log(model.state.bookmarks);
 };
 const controlAddRecipe = async function (newRecipe) {
   console.log(newRecipe);
