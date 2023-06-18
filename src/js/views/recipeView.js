@@ -1,39 +1,10 @@
 import View from "./View";
 import icons from "url:../../img/icons.svg";
-import { Fraction } from "fractional";
-
-console.log(Fraction);
-// console.log(new Fraction(1.2).toString());
-// console.log(new Fraction(1.2).toString());
-// console.log(new Fraction(1).toString());
 
 class recipeView extends View {
   _parentElement = document.querySelector(".recipe");
   _errorMessage = "We could not  find that Recipe. Please find another one";
   _message = "";
-  // adding a public method render which will store all the data passed
-  // _data;
-  // render(data) {
-  //   this._data = data;
-  //   const markup = this._generateMarkup();
-  //   this._clearPrentEl();
-
-  //   this._parentElement.insertAdjacentHTML("afterbegin", markup);
-  //   // console.log(markup);
-  // }
-  // _clearPrentEl() {
-  //   this._parentElement.innerHTML = "";
-  // }
-  // renderSpinner() {
-  //   const markup = `<div class="spinner">
-  //     <svg>
-  //     <use href="${icons}#icon-loader"></use>
-  //   </svg>
-  // </div>`;
-  //   this._parentElement.innerHTML = "";
-  //   this._parentElement.insertAdjacentHTML("afterbegin", markup);
-  //   // console.log(markup);
-  // }
 
   _generateMarkup() {
     return `
@@ -51,9 +22,9 @@ class recipeView extends View {
       <svg class="recipe__info-icon">
         <use href="${icons}#icon-clock"></use>
       </svg>
-      <span class="recipe__info-data recipe__info-data--minutes">${new Fraction(
+      <span class="recipe__info-data recipe__info-data--minutes">${
         this._data.cookingTime
-      ).toString()}</span>
+      }</span>
       <span class="recipe__info-text">minutes</span>
     </div>
     <div class="recipe__info">
@@ -135,7 +106,7 @@ class recipeView extends View {
               <use href="src/img/icons.svg#icon-check"></use>
             </svg>
             <div class="recipe__quantity">${
-              ing.quantity ? new Fraction(ing.quantity).toString() : ""
+              ing.quantity ? ing.quantity : ""
             }</div>
             <div class="recipe__description">
               <span class="recipe__unit">  ${ing.description}</span>
