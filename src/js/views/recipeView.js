@@ -1,5 +1,6 @@
 import View from "./View";
 import icons from "url:../../img/icons.svg";
+import { decimalToFraction } from "../helper";
 
 class recipeView extends View {
   _parentElement = document.querySelector(".recipe");
@@ -22,9 +23,9 @@ class recipeView extends View {
       <svg class="recipe__info-icon">
         <use href="${icons}#icon-clock"></use>
       </svg>
-      <span class="recipe__info-data recipe__info-data--minutes">${
+      <span class="recipe__info-data recipe__info-data--minutes">${decimalToFraction(
         this._data.cookingTime
-      }</span>
+      )}</span>
       <span class="recipe__info-text">minutes</span>
     </div>
     <div class="recipe__info">
@@ -106,7 +107,7 @@ class recipeView extends View {
               <use href="src/img/icons.svg#icon-check"></use>
             </svg>
             <div class="recipe__quantity">${
-              ing.quantity ? ing.quantity : ""
+              ing.quantity ? decimalToFraction(ing.quantity) : ""
             }</div>
             <div class="recipe__description">
               <span class="recipe__unit">  ${ing.description}</span>
