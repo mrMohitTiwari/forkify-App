@@ -47,11 +47,11 @@ const handleRecipe = async function () {
 const controlSearchResults = async function () {
   try {
     //loading the spinner
-    resultsView.renderSpinner();
     // getting search query
     const query = searchView.getQuery();
     console.log(query);
-    if (!query || query === " ") return;
+    if (!query) return;
+    resultsView.renderSpinner();
     // load search results
     await model.loadSearchResults(query);
     // rendring data
