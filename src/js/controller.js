@@ -27,7 +27,7 @@ const handleRecipe = async function () {
   try {
     const id = window.location.hash
       ? window.location.hash.slice(1)
-      : "5ed6604591c37cdc054bcb34";
+      : "5ed6604591c37cdc054bcb54";
     // console.log(id);
     if (!id) return;
     recipeView.renderSpinner();
