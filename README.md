@@ -2,7 +2,7 @@
 
 Welcome to Forkify, a fantastic recipe app created using pure JavaScript and following the MVC architecture. Forkify enables you to explore a vast collection of recipes, search for dishes by name, ingredients, and servings, and conveniently bookmark your favorite recipes for quick access.
 
-link to website: https://64c5a43869c5d80008389a68--forkify-memohit.netlify.app/
+link to website: https://main--forkify-memohit.netlify.app/#5ed6604591c37cdc054bcd5a
 
 ## Table of Contents
 
